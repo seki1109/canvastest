@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+		<title>test</title>
+		
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="html5test.js"></script>
+
+		    
+	</head>
+	<body onload="init()">
+		<canvas id="preview_test" height="300" width="300" style="border:3px solid gray">
+		</canvas>
+
+		<form>
+			<input type="button" id="rotate" value="rotate" onclick="rotateCanvas();" />
+			<input type="button" id="clear" value="clear" onclick="clearCanvas();" />
+			<input type="button" id="moveImageButton" value="移動" onclick="moveImage();" />
+			<input type="button" id="addCanvasButton" value="追加" onclick="addCanvas();" />
+			
+			<input type="button" id="changeCanvas_1" value="changeCanvas_1" onclick="changeCanvas(1);" />
+			<input type="button" id="changeCanvas_2" value="changeCanvas_2" onclick="changeCanvas(2);" />
+
+			
+		</form>
+	</body>
+</html>

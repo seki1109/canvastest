@@ -1,0 +1,144 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="application-name" content="pscompaint" />
+    <meta name="description" content="pscommunications paint tool" />
+    <meta name="Author" content="no-seki" />
+    <title>PSコミュニケーションズ ペイント</title>
+    <link rel="stylesheet" href="./paint.css" type="text/css">
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="easydrag.js"></script>
+    <script type="text/javascript" src="paint.js"></script>
+    <script type="text/javascript" src="painttools.js"></script>
+    <script type="text/javascript" src="paintmenu.js"></script>
+    <script type="text/javascript" src="colorpicker.js"></script>
+    <script type="text/javascript" src="brushsize.js"></script>
+    <script type="text/javascript" src="postimage.js"></script>
+</head>
+<body>
+	<div id="paper"></div>
+    
+	<div id="eventcatcher"></div>
+    
+    <div class="menu" id="seki">
+        <h2>Seki</h2>
+        <button title="ImageUp" id="button_file_upload" class="menu_button">
+        	<img src="./icons/file_upload.png" width="64" height="64" />
+        </button>
+    </div>
+    
+    <div class="menu" id="layers">
+        <h2>Layers</h2>
+        <button title="Layer 1" id="button_layer1" class="selected">
+        	<img src="./icons/eye_open.png" width="14" height="14" name="0" class="eye 0" alt ="Hide Layer 1"/> Layer 1
+        </button>
+        <button title="Layer 2" id="button_layer2">
+        	<img src="./icons/eye_open.png" width="14" height="14" name="1" class="eye" alt ="Hide Layer 2"/> Layer 2
+        </button>
+        <button title="Layer 2" id="button_add_layer">
+        	<img src="./icons/eye_open.png" width="14" height="14" name="1" class="eye" alt ="Hide Layer 2"/> Layer 2
+        </button>
+    </div>
+    http://images.apple.com/jp/iphone/features/images/photos-hero-20100624.png
+<!--
+    <div class="menu" id="tools">
+        <h2>Tools</h2>
+        <button title="Brush" id="button_brush" class="tool"><img src="./icons/brush.png" width="40" height="40" /></button>
+        <button title="Air Brush" id="button_airbrush" class="tool"><img src="./icons/airbrush.png" width="40" height="40" /></button>
+        <button title="Syringe (alt+click)" id="button_syringe" class="tool"><img src="./icons/syringe.png" width="40" height="40" /></button>
+        <button title="Eraser" id="button_eraser" class="tool"><img src="./icons/eraser.png" width="40" height="40" /></button>
+        <button title="Fill Rect" id="button_fillrect" class="tool"><img src="./icons/fillrect.png" width="40" height="40" /></button>
+        <button title="Clear Rect" id="button_clearrect" class="tool"><img src="./icons/clearrect.png" width="40" height="40" /></button>
+        <button title="Paint Fill" id="button_paintfill" class="tool"><img src="./icons/paintfill.png" width="40" height="40" /></button>
+        <button class="dummy_button"></button>
+    </div>
+-->    
+    
+<!--
+    <div class="menu" id="layers">
+        <h2>Layers</h2>
+        <button title="Layer 1" id="button_layer1" class="selected"><img src="./icons/eye_open.png" width="14" height="14" name="0" class="eye 0" alt ="Hide Layer 1"/> Layer 1</button>
+        <button title="Layer 2" id="button_layer2"><img src="./icons/eye_open.png" width="14" height="14" name="1" class="eye" alt ="Hide Layer 2"/> Layer 2</button>
+    </div>
+-->
+
+<!--	キャンバス操作
+    <div class="menu" id="edit">
+        <h2>Edit</h2>
+        <button title="Undo (ctrl+z)" id="button_undo" class="disabled">Undo</button>
+        <button title="Clear all layers" id="button_clearall">Clear All</button>
+        <!-<button title="Get the image to new window as png" id="button_getimage">Get Image</button>->
+        <button title="Post the image" id="button_postimage">Post Image</button>
+    </div>
+-->
+    
+<!--
+    <div class="menu" id="color">
+        <h2>Color</h2>
+        <div id="colorpicker">
+            <div class="colorpicker_tab_buttons">
+                <button id="rgb_button" class="colorpicker_tab_button selected">RGB</button>
+                <button id="hsl_button" class="colorpicker_tab_button">HSL</button>
+                <!- <button id="wheel_button" class="colorpicker_tab_button">Wheel</button> ->
+            </div>
+            <div id="rgb_picker" class="colorpicker_tab"></div>
+            <div id="hsl_picker" class="colorpicker_tab"></div>
+            <div id="wheel_picker" class="colorpicker_tab"></div>
+            <div id = "outoftag_picker"></div>
+        </div>
+    </div>
+-->
+
+<!--	筆サイズ
+    <div class="menu" id="brushedit">
+        <h2>筆</h2>
+        <div id="brushsizer">
+        </div>
+    </div>
+-->
+
+<!--	塗つぶしのサブメニュー
+    <div class="menu" id="paintfill">
+        <h2>塗りつぶし</h2>
+        <div id="paintfilloption">
+        <div>
+            <label>
+                Paint by:
+                <select id="select_paintby">
+                    <option value="integrated">Integrated Layer</option>
+                    <option value="current">Current Layer</option>
+                    <option value="0">Layer 1</option>
+                    <option value="1">Layer 2</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label><input type="Checkbox" id="check_paintfill_antialias" checked="true"/>Antialias</label>
+        </div>
+        <div><label>Threshold: <span id="paintfill_threshold">1</span></label>
+            <div class="range">
+                <div id="paintfill_threshold_range"></div>
+                <div class="range_bar"></div>
+                <div class="range_pos"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+-->
+	
+<!-- イメージ送信のサブメニュー
+    <div class="menu" id="postimage">
+        <h2>Post Image</h2>
+        <div id="postimage_form">
+            <label>Name:<br /><input type="text" id="postimage_name"/></label>
+            <label>Comment:<br /><input type="text" id="postimage_comment"/></label>
+            <div id="postimage_buttons">
+                <button id="button_post">Post</button> <button id="button_cancelpost">Cancel</button>
+            </div>
+        </div>
+    </div>
+-->
+
+</body>
+</html>
